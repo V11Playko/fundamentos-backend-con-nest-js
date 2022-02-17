@@ -44,4 +44,3 @@ export class AppController {
     return `product ${productId} and ${id}`;
   }
 }
-
