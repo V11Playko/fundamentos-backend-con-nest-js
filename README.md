@@ -1,3 +1,21 @@
+# Backend course with NestJS
+> **Proyect Of Course**
+
+# Description of project
+```
+Learn web development with NestJS, the fastest growing Node.js framework. Get to know the structure of backend projects in JavaScript with scalable architecture and build a REST API following good data integrability practices. Boost your professional career as a backend developer with your teacher Nicolas Molina.
+```
+
+- Develop web applications with NestJS.
+
+- Understand the structure and architecture of a backend project.
+
+- Program controllers, services and custom pipes.
+
+- Build the CRUD of a REST API.
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
