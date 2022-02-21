@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductsController } from './controllers/products.controller';
-import { CategoriesController } from './controllers/categories.controller';
-import { ProductsService } from './services/products.service';
+import { ProductsController } from './products/controllers/products.controller';
+import { CategoriesController } from './products/controllers/categories.controller';
+import { ProductsService } from './products/services/products.service';
 
 @Module({
   imports: [],
