@@ -27,6 +27,20 @@ Learn modular programming with NestJS. Find out how to use modules to develop th
 
 - Deploy with Heroku
 
+# Third part of the project (Commit: starting the third part)
+```
+Connect your NestJS REST API to relational databases like PostgreSQL using TypeORM, the most popular TypeScript ORM for Node.js. Interact with Postgres to structure your web application's models, schemas, relationships, and migrations. Create a professional development environment using Docker containers. Expand your skills as a backend developer with your teacher Nicolas Molina.
+```
+- Integrate PostgreSQL into your web application with NestJS. 
+
+- Query relational databases from your REST API.
+
+- Generate relationships and migrations with TypeORM.
+
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
