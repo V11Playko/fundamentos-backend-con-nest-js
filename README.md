@@ -15,7 +15,17 @@ Learn web development with NestJS, the fastest growing Node.js framework. Get to
 
 - Build the CRUD of a REST API.
 
+# Second part of the project (Commit: The project was modulated)
+```
+Learn modular programming with NestJS. Find out how to use modules to develop the backend of your web application with better organization. Generate automatic documentation for your project by combining Swagger with Open API and deploy your REST API to production on Heroku.
+```
+- Develop web applications with modular programming.
 
+- Structure your backend project with NestJS modules.
+
+- Document your REST API with Swagger and Open API.
+
+- Deploy with Heroku
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
