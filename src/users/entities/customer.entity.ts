@@ -1,45 +1,21 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
-  OneToOne,
-  OneToMany,
-} from 'typeorm';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document, Types } from 'mongoose';
 
-import { User } from './user.entity';
-import { Order } from './order.entity';
-
-@Entity()
-export class Customer {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column({ type: 'varchar', length: 255 })
+@Schema()
+export class Customer extends Document {
+  @Prop({ required: true })
   name: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Prop({ required: true })
   lastName: string;
 
-  @Column({ type: 'varchar', length: 255 })
+  @Prop()
   phone: string;
 
-  @CreateDateColumn({
-    type: 'timestamptz',
-    default: () => 'CURRENT_TIMESTAMP',
+  @Prop({
+    type: [{ name: { type: String }, color: { type: String } }],
   })
-  createAt: Date;
-
-  @UpdateDateColumn({
-    type: 'timestamptz',
-    default: () => 'CURRENT_TIMESTAMP',
-  })
-  updateAt: Date;
-
-  @OneToOne(() => User, (user) => user.customer, { nullable: true })
-  user: User;
-
-  @OneToMany(() => Order, (order) => order.customer)
-  orders: Order[];
+  skills: Types.Array<Record<string, any>>;
 }
+
+export const CustomerSchema = SchemaFactory.createForClass(Customer);
