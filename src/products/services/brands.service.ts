@@ -1,22 +1,20 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 
 import { Brand } from '../entities/brand.entity';
 import { CreateBrandDto, UpdateBrandDto } from '../dtos/brand.dtos';
 
 @Injectable()
 export class BrandsService {
-  constructor(@InjectRepository(Brand) private brandsRepo: Repository<Brand>) {}
+  constructor(@InjectModel(Brand.name) private brandModel: Model<Brand>) {}
 
   findAll() {
-    return this.brandsRepo.find();
+    return this.brandModel.find().exec();
   }
 
-  findOne(id: number) {
-    const product = this.brandsRepo.findOne({
-      relations: ['products'],
-    });
+  async findOne(id: string) {
+    const product = await this.brandModel.findOne({ _id: id }).exec();
     if (!product) {
       throw new NotFoundException(`Brand #${id} not found`);
     }
@@ -24,17 +22,21 @@ export class BrandsService {
   }
 
   create(data: CreateBrandDto) {
-    const newBrand = this.brandsRepo.create(data);
-    return this.brandsRepo.save(newBrand);
+    const newBrand = new this.brandModel(data);
+    return newBrand.save();
   }
 
-  async update(id: number, changes: UpdateBrandDto) {
-    const brand = await this.findOne(id);
-    this.brandsRepo.merge(brand, changes);
-    return this.brandsRepo.save(brand);
+  async update(id: string, changes: UpdateBrandDto) {
+    const product = await this.brandModel
+      .findByIdAndUpdate(id, { $set: changes }, { new: true })
+      .exec();
+    if (!product) {
+      throw new NotFoundException(`Brand #${id} not found`);
+    }
+    return product;
   }
 
-  remove(id: number) {
-    return this.brandsRepo.delete(id);
+  remove(id: string) {
+    return this.brandModel.findByIdAndDelete(id);
   }
 }
