@@ -37,7 +37,15 @@ Connect your NestJS REST API to relational databases like PostgreSQL using TypeO
 
 - Generate relationships and migrations with TypeORM.
 
+# Fourth part of the project (Commit: starting the fourth part)
+```
+Connect your REST API in NestJS to MongoDB, the most popular NoSQL database for Node.js. Interact with Mongo to structure your web application's models, schemas, and relationships. Create a professional development environment using Docker containers. Expand your skills as a backend developer with your teacher Nicolás Molina.
+```
+- Configure Docker, Mongoose, MongoDB Compass, and MongoDB Atlas
 
+- Integrate MongoDB to your web application with NestJS
+
+- Query non-relational databases from your REST API.
 
 
 
