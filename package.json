@@ -1,5 +1,5 @@
 {
-  "name": "fundamentos-backend-con-nest-js",
+  "name": "platzi-store",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -18,34 +18,22 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "migrations:generate": "npm run typeorm -- migration:generate -n",
-    "migrations:run": "npm run typeorm -- migration:run",
-    "migrations:show": "npm run typeorm -- migration:show",
-    "migrations:drop": "npm run typeorm -- migration:drop",
-    "migrations:revert": "npm run typeorm -- migration:revert"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^8.3.1",
+    "@nestjs/common": "^7.6.13",
     "@nestjs/config": "^0.6.3",
-    "@nestjs/core": "^8.3.1",
+    "@nestjs/core": "^7.6.13",
     "@nestjs/mapped-types": "^0.3.0",
-    "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.13",
     "@nestjs/swagger": "^4.7.16",
-    "@nestjs/typeorm": "^8.0.3",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "joi": "^17.4.0",
-    "mongodb": "^3.7.3",
-    "mongoose": "^5.11.20",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
-    "save": "^2.4.0",
-    "swagger-ui-express": "^4.1.6",
-    "typeorm": "^0.2.44"
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.6",
@@ -53,7 +41,6 @@
     "@nestjs/testing": "^7.6.13",
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.20",
-    "@types/mongodb": "^3.6.20",
     "@types/node": "^14.14.31",
     "@types/supertest": "^2.0.10",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
