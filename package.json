@@ -27,13 +27,14 @@
     "migrations:revert": "npm run typeorm -- migration:revert"
   },
   "dependencies": {
-    "@nestjs/common": "^7.6.13",
+    "@nestjs/common": "^8.3.1",
     "@nestjs/config": "^0.6.3",
-    "@nestjs/core": "^7.6.13",
+    "@nestjs/core": "^8.3.1",
     "@nestjs/mapped-types": "^0.3.0",
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.13",
     "@nestjs/swagger": "^4.7.16",
+    "@nestjs/typeorm": "^8.0.3",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "joi": "^17.4.0",
@@ -42,7 +43,9 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
-    "swagger-ui-express": "^4.1.6"
+    "save": "^2.4.0",
+    "swagger-ui-express": "^4.1.6",
+    "typeorm": "^0.2.44"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.6",
