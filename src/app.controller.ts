@@ -20,8 +20,8 @@ export class AppController {
     return 'con /sas/';
   }
 
-  @Get('tasks')
-  tasks() {
+  @Get('/tasks/')
+  getTasks() {
     return this.appService.getTasks();
   }
 }
