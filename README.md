@@ -47,6 +47,18 @@ Connect your REST API in NestJS to MongoDB, the most popular NoSQL database for 
 
 - Query non-relational databases from your REST API.
 
+# Fifth part of the project (Commit: starting the fifth part)
+```
+Learn authentication strategies for your NestJS REST API with Passport.js and JSON Web Tokens. Implement guards, password hashes, tokens, protected paths, and user roles in your web application. Deploy your project with data persistence and automatic documentation to production using Heroku. Become a professional backend developer with your teacher Nicolas Molina.
+```
+- Build an authentication strategy for your REST API.
+
+- Autentica usuarios con Passport y JSON Web Tokens. 
+
+- Haz deploy con Heroku.
+
+
+
 
 
 <p align="center">
