@@ -19,7 +19,7 @@ import { Request } from 'express';
 export class ApiKeyGuard implements CanActivate {
   constructor(
     private reflector: Reflector,
-    @Inject(config.KEY) private configService: ConfigType<typeof config>,
+    @Inject(config.KEY) private configService: ConfigType<typeof config>
   ) {}
 
   canActivate(
