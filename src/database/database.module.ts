@@ -26,11 +26,10 @@ const API_KEY_PROD = 'PROD1212121SA';
           user,
           password,
           host,
-          port,
           dbName,
         } = configService.mongo;
         return {
-          uri: `${connection}://${host}:${port}`,
+          uri: `${connection}://${host}`,
           user,
           pass: password,
           dbName,
@@ -52,10 +51,9 @@ const API_KEY_PROD = 'PROD1212121SA';
           user,
           password,
           host,
-          port,
           dbName,
         } = configService.mongo;
-        const uri = `${connection}://${user}:${password}@${host}:${port}/?authSource=admin&readPreference=primary`;
+        const uri = `${connection}://${user}:${password}@${host}/?authSource=admin&readPreference=primary`;
         const client = new MongoClient(uri);
         await client.connect();
         const database = client.db(dbName);
